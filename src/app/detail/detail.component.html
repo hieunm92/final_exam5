@@ -1,0 +1,23 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">DETAIL BOOK</h1>
+  </div>
+
+</section>
+<div class="container">
+  <dl class="row">
+    <dt class="col-sm-3">Name Book</dt>
+    <dd class="col-sm-9" >{{book.title}}</dd>
+
+    <dt class="col-sm-3">Author</dt>
+    <dd class="col-sm-9">{{book.author}}
+    </dd>
+
+    <dt class="col-sm-3">Description</dt>
+    <dd class="col-sm-9">{{book.description}}</dd>
+  </dl>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="float: right; width: 120px">
+    <button class="btn btn-primary" type="button" [routerLink]="''">Back to List</button>
+  </div>
+</div>
+

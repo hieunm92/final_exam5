@@ -1,0 +1,34 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">CREATE BOOK</h1>
+  </div>
+
+</section>
+
+<div class="container">
+  <form (ngSubmit)="updateBook()">
+    <div class="mb-3">
+      <label for="nameBook" class="form-label">Name Book</label>
+      <input type="text" class="form-control" id="nameBook" placeholder="Name Book" [(ngModel)]="book.title"
+             name="title">
+    </div>
+    <div class="mb-3">
+      <label for="author" class="form-label">Author</label>
+      <input type="text" class="form-control" id="author" placeholder="Author" [(ngModel)]="book.author" name="author">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" [(ngModel)]="book.description"
+                name="description"></textarea>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="float: right; width: 120px">
+      <button class="btn btn-primary" type="button" [routerLink]="''">Back to List</button>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end" >
+      <button class="btn btn-primary" type="submit" value="submit">Edit</button>
+    </div>
+
+  </form>
+</div>
+
+

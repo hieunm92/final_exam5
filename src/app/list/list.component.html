@@ -1,0 +1,49 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">LIST BOOKS</h1>
+  </div>
+
+</section>
+<button type="button" class="btn btn-primary btn-lg" [routerLink]="'create'">Create Book</button>
+
+<div class="container mb-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Description</th>
+            <th colspan="2" style="align-content: center"> Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let book of listBooks, index as i">
+            <td>{{i+1}}</td>
+            <td><a [routerLink]="'/detail/'+book.id">{{book.title}}</a></td>
+            <td>{{book.author}}</td>
+            <td>{{book.description}}</td>
+            <td>
+              <button type="button" class="btn btn-success"[routerLink]="'update/'+book.id">Edit</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger"[routerLink]="'delete/'+book.id">Delete</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
